@@ -1,4 +1,5 @@
 import random
+import time
 
 def dobra_um_numero(num: int):
     return num * 2
@@ -10,8 +11,10 @@ def read_numbers_from_file():
 
 
 if __name__ == "__main__":
-    last_number = read_numbers_from_file()
-    print(last_number)
-    doubled_number = dobra_um_numero(last_number)
-    print(f"O dobro de {last_number} é {doubled_number}")
+    while True:
+        last_number = read_numbers_from_file()
+        print(last_number)
+        doubled_number = dobra_um_numero(last_number)
+        print(f"O dobro de {last_number} é {doubled_number}")
+        time.sleep(1)  
 
