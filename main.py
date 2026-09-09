@@ -1,17 +1,12 @@
+from fastapi import FastAPI
 import random
+import time
 
+servidor = FastAPI()
+
+@servidor.get("/recursos")
 def numero_aleatorio():
-    return random.randint(1, 95)
+    num = random.randint(1, 95)
+    print(num)
+    return num
 
-def dobra_um_numero(num: int):
-    return num * 2
-
-def main():
-    num = numero_aleatorio()
-    num_dobrado = dobra_um_numero(num)
-    print(f"O dobro de {num} é {num_dobrado}")
-
-if __name__ == "__main__":
-    main()
-
-    
